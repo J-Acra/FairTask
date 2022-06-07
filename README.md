@@ -35,6 +35,4 @@ Beyond the short 36 hours time frame, this hackathon presented a few challenges.
 
 ## Future Features
 
-If time was not a factor, the team had discussed potentially integrating authentication to the app through the Linkedin API, integration of several job platforms, and even a potential browser plugin to automatically keep track of job applications. 
-
-The latter was considered a bit too invasive and the team opted for user-provided input instead. There were also some less essential features discussed such as a summary of activity including counters, pre-populated cover letter and thank you note templates, follow-up reminders, and a curated social media feed targeted to job-seekers.
+If time was not a factor, the team had discussed potentially integrating external authentications to the app through various accounts (facebook,github,etc) and automated reminders. Some other features discussed were showing activity history, current count of applications, and filters to view them by.
