@@ -30,7 +30,7 @@ Once added, each job application will remain on the left side of the dashboard, 
 
 ## Challenges
 
-Beyond the short 36 hours time frame, this hackathon presented a few challenges. Team members availability was definitely an issue as this was a remote event which did not require the participants to stay in the same location. Lack of sleep and fatigue had a big impact on progress during the second half of the project. Of course, many hours were spent reading through Flask and SQLAlchemy documentation as issues cropped up.
+Beyond the short 36 hours time frame, this hackathon presented a few challenges. Determining the scope of everyones abilities and deciding on how the project was going to be split came first. Then Team members availability was definitely an issue as this was a remote event which did not require the participants to stay in the same location. A Lack of sleep and fatigue had the biggest impact on progress during the second half of the project. 
 
 ## Future Features
 
