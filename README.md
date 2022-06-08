@@ -14,13 +14,13 @@ As all the members of our group were attempting to pivot from our respective car
 
 ## Development
 
+Back-end Technologies: Python, Flask, SQLAlchemy, JWT Authentication.
+Front-end Technologies: JavaScript, React.js, Bootstrap.
+
 This application was developed on [Gitpod.io](https://www.gitpod.io/) which provides an easy-to-use developing environment.
 
-App-Tracker runs on the [Heroku](https://www.heroku.com/[) platform which allows for the app keep running for free on the entry-level pricing tier. 
+App-Tracker runs on the [Heroku](https://www.heroku.com/[) platform which allows for the app to keep running for free on the entry-level pricing tier. 
 Using Gitpod.io and Heroku together allowed our team to not have to worry about running and linking a postgres database, as it was all automatically taken care of behind the scenes.
-
-The back-end of the application was created using Python and Flask SQLAlchemy with Flask JWT authentication.
-The front-end was developed using JavaScript, React.js, Bootstrap.
 
 ## Features
 
