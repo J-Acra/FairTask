@@ -4,10 +4,9 @@
 # Video Submission: [Watch Here](https://www.loom.com/share/aa338eba22e84629987e8041849d4e43)
 
  
-
 ## Context
 
-Hack for the Future is a hackathon organized by Bootup and focused on building tools that help people manage their day-to-day lives, navigate career transitions, and excel in their new careers. Think of tools that would help with time management, goal setting, productivity, continued education, and beyond. Many bootcamp graduates are going through their own career transitions and managing their own hectic lives - this hackathon was an opportunity to create innovative tools that could help bootcamp graduates.
+Hack for the Future is a 36-Hour hackathon organized by Bootup and focused on building tools that help people manage their day-to-day lives, navigate career transitions, and excel in their new careers. Think of tools that would help with time management, goal setting, productivity, continued education, and beyond. Many bootcamp graduates are going through their own career transitions and managing their own hectic lives - this hackathon was an opportunity to create innovative tools that could help bootcamp graduates.
 
 As all the members of our group were attempting to pivot from our respective careers at the time of this hackathon, we decided to build a tool to track the job applications completed by users. Spreadsheets are an acceptable solution, but it can become difficult to keep track of status updates along with the details of each job one applies to. App-Tracker is a quality of life application which aims at helpin job seekers to better keep track of their applications and also provide them with tools to quickly apply to positions.
 
