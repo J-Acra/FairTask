@@ -3,11 +3,6 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Link, useParams, useHistory } from "react-router-dom";
 import { Context } from "../store/appContext";
-import { Navbar } from "../component/navbar.jsx";
-import { Social } from "../component/social.jsx";
-import { JobLinks } from "../component/jobLinks.jsx";
-
-import { LoginBanner } from "../component/loginBanner.jsx";
 
 export const Login = () => {
   //react declarations
@@ -17,8 +12,7 @@ export const Login = () => {
   //declare states here vvvv
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
-  const [firstName, setFirstName] = useState();
-  const [lastName, setLastName] = useState();
+  const [userName, setUserName] = useState();
   const logStatus = JSON.parse(localStorage.getItem("session"));
 
   if (logStatus != null) {
@@ -27,7 +21,6 @@ export const Login = () => {
 
   return (
     <div className="dashBody w-100">
-      <LoginBanner />
       <div className="dashBoardHome">
         <div className="">
           <ul
@@ -73,7 +66,7 @@ export const Login = () => {
             >
               <div class="me-0 d-flex justify-content-center align-items-center h-100">
                 <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-                  <div class="loginCard border-0 card text-white">
+                  <div class="loginCard border-0 card">
                     <div class="card-body text-center">
                       <div class="mb-md-5 mt-md-4 pb-5">
                         <div class="form-outline form-white mb-4">
@@ -107,7 +100,7 @@ export const Login = () => {
                           </label>
                         </div>
                         <button
-                          class="btn btn-outline-light btn-lg px-5"
+                          class="btn btn-dark btn-lg px-5"
                           type="submit"
                           onClick={() => {
                             actions
@@ -123,7 +116,7 @@ export const Login = () => {
                           Login
                         </button>
                         <p class="small mb-5 pb-lg-2 mt-4">
-                          <a class="text-white-50" href="#!">
+                          <a class="text-dark-50" href="#!">
                             Forgot password?
                           </a>
                         </p>
@@ -176,24 +169,8 @@ export const Login = () => {
                         <div class="form-outline form-white mb-4">
                           <input
                             type="text"
-                            value={firstName}
-                            onChange={(e) => setFirstName(e.target.value)}
-                            placeholder="First Name"
-                            id="typeFirstNameX"
-                            class="form-control form-control-lg pt-3"
-                          />
-                          <label
-                            className="form-label mt-2"
-                            for="typeFirstNameX"
-                          >
-                            First Name
-                          </label>
-                        </div>
-                        <div class="form-outline form-white mb-4">
-                          <input
-                            type="text"
-                            value={lastName}
-                            onChange={(e) => setLastName(e.target.value)}
+                            value={userName}
+                            onChange={(e) => setUserName(e.target.value)}
                             placeholder="Last Name"
                             id="typeLastNameX"
                             class="form-control form-control-lg pt-3"
@@ -206,7 +183,7 @@ export const Login = () => {
                           </label>
                         </div>
                         <button
-                          class="btn btn-outline-light btn-lg px-5"
+                          class="btn btn-dark btn-lg px-5"
                           type="submit"
                           onClick={async () => {
                             try {
