@@ -50,15 +50,14 @@ const getState = ({ getStore, getActions, setStore }) => {
           throw "unknown error";
         }
       },
-      createUser: async (email, password, first_name, last_name) => {
+      createUser: async (email, password, user_name) => {
         const actions = getActions();
         const options = {
           method: "POST",
           body: JSON.stringify({
             email: email,
             password: password,
-            first_name: first_name,
-            last_name: last_name,
+            user_name: user_name,
           }),
         };
         const payload = await actions._fetch(`/api/user`, options);

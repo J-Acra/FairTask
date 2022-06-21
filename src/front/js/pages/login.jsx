@@ -190,8 +190,7 @@ export const Login = () => {
                               const payload1 = await actions.createUser(
                                 email,
                                 password,
-                                firstName,
-                                lastName
+                                userName
                               );
                               const payload2 = actions.createNewSession(
                                 email,

@@ -24,8 +24,26 @@ def create_token():
 def create_user():
     email = request.json.get("email", None)
     password = request.json.get("password", None)
-    user_name = request.json.get("user_name", None)
+    user_name = request.json.get("user_name",None)
     user = User(email=email, password=password, user_name=user_name)
     db.session.add(user)
     db.session.commit()
     return jsonify(**user.serialize())
+
+@api.route("/user", methods=["GET"])
+@jwt_required()
+def get_self():
+    current_user_id=get_jwt_identity()
+    user = User.query.get(current_user_id)
+    return jsonify(user.serialize())
+
+@api.route("/user", methods=["PUT"])
+@jwt_required()
+def edit_user():
+    current_user_id=get_jwt_identity()
+    user = User.query.get(current_user_id)
+    email = request.json.get("email")
+    user.email = email
+    db.session.add(user)
+    db.session.commit()
+    return jsonify("User successfully updated")

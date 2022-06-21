@@ -16,7 +16,7 @@ export const Navbar = (props) => {
       if (payload.msg == "Token has expired") {
         actions.clearSession();
       } else {
-        setName("Welcome: " + payload.first_name + " " + payload.last_name);
+        setName("Welcome: " + payload.user_name);
       }
     });
   }, []);
