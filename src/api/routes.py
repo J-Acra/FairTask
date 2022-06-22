@@ -5,16 +5,24 @@ from flask import Flask, request, jsonify, url_for, Blueprint
 from api.models import db, User
 from api.utils import generate_sitemap, APIException
 from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity
+from hashlib import sha256
 
 api = Blueprint('api', __name__)
 
 @api.route("/token", methods=["POST"])
 def create_token():
+    hash_type = sha256()
     if request.json is None:
         return jsonify({"msg": "Body Empty!"}), 401
     email = request.json.get("email", None)
     password = request.json.get("password", None)
-    user = User.query.filter_by(email=email, password=password).first()
+    if not email:
+        return jsonify({"message": "email is empty"}), 400
+    if not password:
+        return jsonify({"message": "password is empty"}), 400
+    hash_type.update(password.encode('utf-8'))
+    hash = hash_type.hexdigest()
+    user = User.query.filter_by(email=email, password=hash).first()
     if user is None:
         raise APIException("User Not Found!")
     access_token = create_access_token(identity=user.id)
@@ -22,10 +30,19 @@ def create_token():
 
 @api.route("/user", methods=["POST"])
 def create_user():
+    if request.json is None:
+        return jsonify({"msg": "Body Empty!"}), 401
+    hash_type = sha256()
     email = request.json.get("email", None)
     password = request.json.get("password", None)
     user_name = request.json.get("user_name",None)
-    user = User(email=email, password=password, user_name=user_name)
+    if not email:
+        return jsonify({"message": "email is empty"}), 400
+    if not password:
+        return jsonify({"message": "password is empty"}), 400
+    hash_type.update(password.encode('utf-8'))
+    hash = hash_type.hexdigest()
+    user = User(email=email, password=hash, user_name=user_name)
     db.session.add(user)
     db.session.commit()
     return jsonify(**user.serialize())

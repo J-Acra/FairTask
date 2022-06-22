@@ -49,16 +49,6 @@ export const Navbar = (props) => {
             >
               Logout
             </li>
-            <li
-              onClick={() => {
-                {
-                  actions.getApplications();
-                }
-              }}
-              className="navDrop btn text-center mx-auto w-100 fs-2"
-            >
-              GetApps
-            </li>
           </ul>
         </div>
       </div>
