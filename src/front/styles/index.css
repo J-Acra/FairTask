@@ -1,3 +1,7 @@
 /* 
     General Styles used on every website (Don't Repeat Yourself)
 */
+.btn-dark {
+  background-color: rgb(87, 87, 87);
+  border-color: rgb(87, 87, 87);
+}
