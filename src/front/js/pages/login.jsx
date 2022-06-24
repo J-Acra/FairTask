@@ -32,37 +32,32 @@ export const Login = () => {
               FAIRTASK
             </div>
           </div>
+          <div className="fs-3 d-flex justify-content-center my-5">
+            <div className="mx-auto fs-1">Login to your Account</div>
+          </div>
           <div class="me-0 d-flex justify-content-center align-items-center h-100">
             <div class="col-12 col-md-8 col-lg-6 col-xl-5">
               <div class="loginCard border-0 card">
                 <div class="card-body text-center">
                   <div class="mb-md-5 mt-md-4 pb-5">
-                    <div class="form-outline form-white mb-4">
+                    <div class="form-outline form-white mb-4 loginBox">
                       <input
                         type="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        placeholder="Example@example.com"
-                        id="typeEmailX"
-                        class="form-control form-control-lg pt-3"
+                        placeholder="Email"
+                        className="form-control form-control-lg pt-3 border-0"
                       />
-                      <label className="form-label mt-2" for="typeEmailX">
-                        Email
-                      </label>
                     </div>
 
-                    <div class="form-outline form-white mb-4">
+                    <div class="form-outline form-white mb-4 loginBox">
                       <input
                         type="password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
-                        placeholder="Enter Password (Case Sensitive)"
-                        id="typePasswordX"
-                        class="form-control form-control-lg pt-3"
+                        placeholder="Password"
+                        class="form-control form-control-lg pt-3 border-0"
                       />
-                      <label className="form-label mt-2" for="typePasswordX">
-                        Password
-                      </label>
                     </div>
                     <button
                       class="btn btn-dark btn-lg px-5 rounded-pill"
@@ -74,25 +69,17 @@ export const Login = () => {
                             history.push("/home");
                           })
                           .catch((e) => {
-                            toast.error(e.message);
+                            toast.error(e.message, { position: "top-center" });
                           });
                       }}
                     >
                       Login
                     </button>
-                    <p class="small mb-5 pb-lg-2 mt-4">
-                      <a
-                        class="text-dark-50"
-                        onClick={() => {
-                          toast.error("Feature under maintenance", {
-                            position: "top-center",
-                            hideProgressBar: true,
-                          });
-                        }}
-                      >
-                        Forgot password?
-                      </a>
-                    </p>
+                    <Link to="/register" class="small mb-5 pb-lg-2 mt-4 d-flex">
+                      <div class="text-muted mx-auto fs-5 text-decoration-underline">
+                        Create an Account
+                      </div>
+                    </Link>
                   </div>
                 </div>
               </div>

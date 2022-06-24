@@ -25,3 +25,4 @@ labels:
     color: 98bde2
   - name: ":beetle: bc-inspector"
     color: 98bde2
+salt = os.urandom(32)
