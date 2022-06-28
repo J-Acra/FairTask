@@ -1,1 +1,1 @@
-An application for making household chores rewarding for all household members.
+An application for making household chores fun and rewarding for young couples.
