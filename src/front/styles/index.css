@@ -18,11 +18,35 @@
 a {
   text-decoration: none;
 }
-.progressFill {
+.progress {
+  width: 39.8%;
+  height: 6px;
+}
+
+.progress1 {
+  width: 33%;
+  background: linear-gradient(to right, #51abf5, #667ff0);
+  transition: 1.5s;
+}
+.progress2 {
+  width: 66%;
+  background: linear-gradient(to right, #51abf5, #667ff0);
+  transition: 1.5s;
+}
+.progress3 {
+  width: 100%;
+  background: linear-gradient(to right, #51abf5, #667ff0);
+  transition: 1.5s;
+}
+input[type="file"] {
+  display: none;
+}
+.Icon {
+  opacity: 50%;
   width: 50%;
 }
 @media (max-width: 576px) {
-  .progressFill {
-    width: 75%;
+  .progress {
+    width: 86%;
   }
 }

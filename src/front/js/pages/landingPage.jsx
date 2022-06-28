@@ -38,12 +38,7 @@ export const LandingPage = (props) => {
               Finish work, then <br /> have some fun!
             </div>
           </div>
-          <Link to="/login">
-            <div className="fs-5 text-center text-dark mt-5">
-              Existing Account? Log in
-            </div>
-          </Link>
-          <div className="d-flex justify-content-center">
+          <div className="d-flex justify-content-center mt-4">
             <Link to="/register">
               <button
                 class="btn btn-dark btn-lg px-5 rounded-pill mt-4"
@@ -54,6 +49,11 @@ export const LandingPage = (props) => {
               </button>
             </Link>
           </div>
+          <Link to="/login">
+            <div className="fs-5 text-muted text-center text-dark mt-4 text-decoration-underline">
+              Existing Account? Log in
+            </div>
+          </Link>
         </div>
       </div>
     </div>

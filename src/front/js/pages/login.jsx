@@ -32,7 +32,7 @@ export const Login = () => {
               FAIRTASK
             </div>
           </div>
-          <div className="fs-3 d-flex justify-content-center my-5">
+          <div className="fs-3 d-flex justify-content-center mb-5 mt-4">
             <div className="mx-auto fs-1">Login to your Account</div>
           </div>
           <div class="me-0 d-flex justify-content-center align-items-center h-100">
@@ -46,21 +46,21 @@ export const Login = () => {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder="Email"
-                        className="form-control form-control-lg pt-3 border-0"
+                        className="form-control form-control-lg border-0"
                       />
                     </div>
 
-                    <div class="form-outline form-white mb-4 loginBox">
+                    <div class="form-outline form-white mb-5 mt-5 loginBox">
                       <input
                         type="password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         placeholder="Password"
-                        class="form-control form-control-lg pt-3 border-0"
+                        class="form-control form-control-lg border-0"
                       />
                     </div>
                     <button
-                      class="btn btn-dark btn-lg px-5 rounded-pill"
+                      class="btn btn-dark btn-lg mt-4 px-5 rounded-pill"
                       type="submit"
                       onClick={() => {
                         actions
@@ -75,7 +75,7 @@ export const Login = () => {
                     >
                       Login
                     </button>
-                    <Link to="/register" class="small mb-5 pb-lg-2 mt-4 d-flex">
+                    <Link to="/register" class="small pb-lg-2 mt-4 d-flex">
                       <div class="text-muted mx-auto fs-5 text-decoration-underline">
                         Create an Account
                       </div>
