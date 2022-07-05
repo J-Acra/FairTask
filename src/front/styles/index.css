@@ -50,3 +50,120 @@ input[type="file"] {
     width: 86%;
   }
 }
+.text {
+  color: #324646;
+}
+.starIcon {
+  margin-top: 1rem;
+  height: 8rem;
+  max-width: 40%;
+}
+.balanceText {
+  letter-spacing: 0.2rem;
+}
+.subTaskContent {
+  height: 3rem;
+  border-radius: 0.8rem;
+  width: 80%;
+  grid-template-columns: 0.5fr 1.3fr 0.5fr;
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  padding: 0.4rem;
+}
+.claimBtn {
+  background-color: #324646;
+  font-size: 0.7rem;
+  padding: 0.2rem 1.3rem;
+  font-weight: 600;
+}
+/* .redeemText { */
+/* font-size: 0.8rem;
+}
+.btn-dark {
+  background-color: rgb(87, 87, 87);
+  border-color: rgb(87, 87, 87);
+}
+/* ADD A TASK PAGE */
+.toDo {
+  color: #324646;
+}
+.taskTitleContainer {
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 1rem;
+}
+.title {
+  grid-column-start: 0;
+  grid-column-end: 3;
+  font-weight: 700;
+  color: #324646;
+}
+.iconContainer {
+  color: #324646;
+  cursor: pointer;
+}
+.person {
+  padding: 1.75rem;
+  border: 2px solid gray;
+  border-radius: 50%;
+  /* border-color: lime; */
+}
+.person:hover {
+  cursor: pointer;
+  border: 3px solid #fedc3c;
+}
+.barContainer {
+  font-size: 2.5rem;
+}
+.barContainer:hover {
+  cursor: pointer;
+  color: gray;
+  transition: 0.2s all linear;
+}
+.toDoList {
+  margin-top: 2rem;
+  min-height: 2rem;
+  background-color: #667373;
+  height: 2.5rem;
+}
+.toDoListContent {
+  color: #324646;
+  font-weight: 700;
+}
+.toDoText {
+  padding-left: 2.313rem;
+  padding-top: 0.188rem;
+  padding-bottom: 0.188rem;
+}
+
+.oneToDoList {
+  grid-template-columns: repeat(3, 1fr);
+  padding: 1rem 0rem;
+  margin: 0rem 1rem;
+  border-bottom: 1px solid#83a1a1;
+}
+.toDoListName {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  padding-left: 3rem;
+}
+.line {
+  color: #83a1a1;
+  height: 3px;
+}
+
+.upcoming {
+  background-color: #b1c4c4;
+  margin-top: 2rem;
+  min-height: 2rem;
+  height: 2.5rem;
+}
+
+.upcomingText {
+  color: 324646;
+  padding-left: 2.313rem;
+  padding-top: 0.188rem;
+  padding-bottom: 0.188rem;
+}
+.upcomingContent {
+  font-weight: 700;
+}

@@ -167,8 +167,8 @@ export const Registration = () => {
                       className="btn btn-dark btn-lg px-5 rounded-pill mt-4 mx-2"
                       type="submit"
                       onClick={() => {
-                        setStep(0);
-                        setProgress("progress1");
+                        setStep(1);
+                        setProgress("progress2");
                       }}
                     >
                       Prev
@@ -176,12 +176,22 @@ export const Registration = () => {
                     <button
                       className="btn btn-dark btn-lg px-5 rounded-pill mt-4"
                       type="submit"
-                      onClick={() => {
-                        setStep(2);
-                        setProgress("progress3");
+                      onClick={async () => {
+                        try {
+                          const payload1 = await actions.createUser(
+                            email,
+                            password,
+                            userName
+                          );
+                          const payload2 = await actions.createNewSession(
+                            email,
+                            password
+                          );
+                          history.push("/tasks");
+                        } catch {}
                       }}
                     >
-                      Next
+                      Submit
                     </button>
                     <Link
                       to="/login"

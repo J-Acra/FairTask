@@ -7,6 +7,8 @@ import { Login } from "./pages/login.jsx";
 import { DashBoard } from "./pages/dashboard.jsx";
 import { Registration } from "./pages/registration.jsx";
 import { LandingPage } from "./pages/landingPage.jsx";
+import { Redeem } from "./pages/redeem.jsx";
+import { Tasks } from "./pages/tasks.jsx";
 
 //create your first component
 const Layout = () => {
@@ -24,6 +26,12 @@ const Layout = () => {
           </Route>
           <Route exact path="/login">
             <Login />
+          </Route>
+          <Route exact path="/redeem">
+            <Redeem />
+          </Route>
+          <Route exact path="/tasks">
+            <Tasks />
           </Route>
           <Route exact path="/register">
             <Registration />
